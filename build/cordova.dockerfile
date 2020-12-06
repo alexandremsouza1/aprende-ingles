@@ -15,7 +15,7 @@ RUN cd /tmp && \
 
 RUN mkdir -p /cordova
 WORKDIR /cordova
-RUN cordova create ingles com.kevapps.learn_ingles ingles
+RUN cordova create ingles com.kevapps.aprende_ingles ingles
 
 WORKDIR /cordova/ingles
 RUN cordova telemetry off
@@ -43,4 +43,4 @@ COPY ./res res
 COPY ./build/build-app /bin/
 COPY ./build/build-apk /bin/
 
-# keytool -genkey -v -keystore learn-ingles.keystore -alias learn-ingles -keyalg RSA -keysize 2048 -validity 20000
+# keytool -genkey -v -keystore aprende-ingles.keystore -alias aprende-ingles -keyalg RSA -keysize 2048 -validity 20000

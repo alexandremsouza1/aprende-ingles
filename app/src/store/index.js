@@ -148,7 +148,7 @@ export default new Vuex.Store({
     // },
     async getDeckList({ commit }) {
       try {
-        const request = await axios.get('https://spf-decks.storage.googleapis.com/decklist.json')
+        const request = await axios.get('https://ai-decks.storage.googleapis.com/decklist.json')
         const deckList = request.data
         if (typeof deckList !== 'object' || !Object.keys(deckList).length) {
           throw Error('invalid deck list')
@@ -170,7 +170,7 @@ export default new Vuex.Store({
         commit('setProposedDeck', {})
         // const bigDownload = parseInt(deck.size) > 5000000
         commit('setDownloadProgress', 0)
-        const request = await axios.get(`https://spf-decks.storage.googleapis.com/${filename}`, {
+        const request = await axios.get(`https://ai-decks.storage.googleapis.com/${filename}`, {
           onDownloadProgress: progress => {
             const downloadProgress = Math.round(progress.loaded / (parseInt(deck.size) * 1.4) * 100)
             commit('setDownloadProgress', downloadProgress)

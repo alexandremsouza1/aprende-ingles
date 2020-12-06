@@ -1,6 +1,6 @@
 apiVersion: v2
-name: learn-spanish
-description: Primary web deployment for learn-spanish
+name: aprende-ingles
+description: Primary web deployment for aprende-ingles
 
 # A chart can be either an 'application' or a 'library' chart.
 #
