@@ -35,7 +35,8 @@ cordova: cordova_build
 			-v $(shell pwd)/app/src:/app/src \
 			-v $(shell pwd)/app/public:/app/public \
 			-v $(shell pwd)/build/config.xml:/cordova/ingles/config.xml \
-								ingles_cordova bash
+								ingles_cordova bash -c "\
+																		build-apk;"
 
 cordova_prod: cordova_build
 	docker run \
